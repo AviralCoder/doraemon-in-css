@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --main-head-width: 320px;
+  --main-head-height: 320px;
+  --main-head-child-width: 240px;
+  --main-head-child-height: 260px;
+  --eye-width: 70px;
+  --eye-height: 90px;
+  --eye-ball-width: 20px;
+  --eye-ball-height: 25px;
+  --eye-ball-inside-width: 5px;
+  --eye-ball-inside-height: 10px;
+  --nose-width: 30px;
+  --nose-height: 30px;
+  --line-below-nose-width: 2px;
+  --line-below-nose-height: 90px;
+  --moustache-width-1: 2px;
+  --moustache-height-1: 55px;
+  --mouth-height: 80px;
+  --mouth-width: 60%;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.content .container {
+  position: relative;
+}
+
+.content .container .main-head {
+  width: var(--main-head-width);
+  height: var(--main-head-height);
+  /*change the background to see more types of mini doraemon*/
+  background: dodgerblue;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.content .container .main-head .main-head-child {
+  width: var(--main-head-child-width);
+  height: var(--main-head-child-height);
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  border: 1px solid #000;
+}
+
+.content .container .main-head .main-head-child .eyes .eye {
+  display: inline-block;
+  width: var(--eye-width);
+  height: var(--eye-height);
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 100%;
+  position: relative;
+}
+
+.content .container .main-head .main-head-child .eyes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.content .container .main-head .main-head-child .eyes .eye .eye-ball {
+  background: #000;
+  height: var(--eye-ball-height);
+  width: var(--eye-ball-width);
+  position: absolute;
+  bottom: 10px;
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.content .container .main-head .main-head-child .eyes .eye .eye-ball::after {
+  content: "";
+  background: #fff;
+  height: var(--eye-ball-inside-height);
+  width: var(--eye-ball-inside-width);
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.content .container .main-head .main-head-child .nose {
+  width: var(--nose-width);
+  height: var(--nose-height);
+  background: #c90011;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 45px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.content .container .main-head .main-head-child .nose::after {
+  content: "";
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  bottom: 10px;
+  left: 6px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 20px 7px #fff;
+          box-shadow: 0 0 20px 7px #fff;
+}
+
+.content .container .main-head .main-head-child .line-below-nose {
+  width: var(--line-below-nose-width);
+  height: var(--line-below-nose-height);
+  background: #000;
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -10;
+}
+
+.content .container .main-head .main-head-child .moustache-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .container .main-head .main-head-child .moustache-div .moustache-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .container .main-head .main-head-child .moustache {
+  background: #000;
+}
+
+.moustache-left-1 {
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+  width: var(--moustache-width-1);
+  height: var(--moustache-height-1);
+  position: relative;
+  bottom: 40px;
+  left: 22px;
+}
+
+.moustache-left-2 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: var(--moustache-width-1);
+  height: var(--moustache-height-1);
+  position: relative;
+  bottom: 60px;
+  left: 25px;
+}
+
+.moustache-left-3 {
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+  width: var(--moustache-width-1);
+  height: var(--moustache-height-1);
+  position: relative;
+  left: 30px;
+  bottom: 80px;
+}
+
+.right-moustache {
+  position: absolute;
+  right: 0;
+}
+
+.moustache-right-1 {
+  width: var(--moustache-width-1);
+  height: var(--moustache-height-1);
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+  bottom: 40px;
+  position: relative;
+  right: 10px;
+}
+
+.moustache-right-2 {
+  width: var(--moustache-width-1);
+  height: var(--moustache-height-1);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  bottom: 60px;
+  position: relative;
+  right: 10px;
+}
+
+.moustache-right-3 {
+  width: var(--moustache-width-1);
+  height: var(--moustache-height-1);
+  -webkit-transform: rotate(100deg);
+          transform: rotate(100deg);
+  bottom: 80px;
+  position: relative;
+  right: 10px;
+}
+
+.mouth {
+  width: var(--mouth-width);
+  height: var(--mouth-height);
+  background: #c9304f;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+/*# sourceMappingURL=style.css.map */
